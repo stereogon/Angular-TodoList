@@ -1,0 +1,10 @@
+<div class="task-card">
+  <div (click)="handleClick()">
+    <h1 class="card-heading" [ngClass]="task.isCompleted ? 'cut dim' : ''">
+      {{ task.task_brief }}
+    </h1>
+  </div>
+  <div class="btn-container">
+    <ng-icon (click)="handleDelete()" name="octXCircleFill"></ng-icon>
+  </div>
+</div>

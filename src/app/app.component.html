@@ -1,0 +1,12 @@
+<app-task-entry-component
+  [value]="inputValue"
+  (message)="onMessage($event)"
+></app-task-entry-component>
+
+<app-task-list-component
+  [tasks]="tasks"
+  [onStatusChange]="onStatusChange.bind(this)"
+  [onDelete]="onDelete.bind(this)"
+  [totalTasks]="getTotalTasks()"
+  [remainingTasks]="getRemainingTasks()"
+></app-task-list-component>

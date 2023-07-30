@@ -1,0 +1,14 @@
+<div class="main-container">
+  <h1 class="count-header">
+    {{ remainingTasks }} of {{ totalTasks }} incomplete
+  </h1>
+  <div class="task-list-container">
+    <app-task-element-component
+      *ngFor="let task of tasks"
+      [task]="task"
+      [onStatusChange]="onStatusChange"
+      [onDelete]="onDelete"
+    >
+    </app-task-element-component>
+  </div>
+</div>

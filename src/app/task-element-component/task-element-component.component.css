@@ -1,0 +1,22 @@
+.task-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid #dfdfdf;
+  border-radius: 0.8rem;
+  margin-top: 1rem;
+}
+
+.cut {
+  text-decoration: line-through;
+}
+
+.dim {
+  opacity: 0.4;
+}
+
+.card-heading {
+  font-size: 1rem;
+  font-weight: normal;
+}

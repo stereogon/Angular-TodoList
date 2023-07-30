@@ -1,0 +1,14 @@
+<div class="task-entry-container">
+  <div class="input-container">
+    <input
+      class="entry-input"
+      name="value"
+      type="text"
+      #Input
+      [(ngModel)]="value"
+    />
+  </div>
+  <div class="btn-container">
+    <button (click)="clickHandler(Input.value)" class="btn add">Add</button>
+  </div>
+</div>
