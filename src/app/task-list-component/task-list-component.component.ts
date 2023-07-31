@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Task } from 'src/types';
 
 @Component({
@@ -13,8 +13,15 @@ export class TaskListComponentComponent {
   @Input()
   onDelete!: Function;
 
+  @Input()
+  option!: number;
+
   @Input() totalTasks!: number;
   @Input() remainingTasks!: number;
 
   @Input() onStatusChange!: Function;
+
+  @Input() clearAll!: Function;
+  @Input() getTasksByOption!: Function;
+  @Input() changeOption!: Function;
 }

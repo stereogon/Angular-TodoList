@@ -1,14 +1,38 @@
 <div class="main-container">
-  <h1 class="count-header">
-    {{ remainingTasks }} of {{ totalTasks }} incomplete
-  </h1>
   <div class="task-list-container">
     <app-task-element-component
-      *ngFor="let task of tasks"
+      *ngFor="let task of getTasksByOption(option)"
       [task]="task"
       [onStatusChange]="onStatusChange"
       [onDelete]="onDelete"
     >
     </app-task-element-component>
+    <div class="stats-container">
+      <p class="count-header">{{ remainingTasks }} items left</p>
+      <div class="sorting-box">
+        <p
+          [ngClass]="option === 3 ? 'active' : ''"
+          (click)="changeOption(3)"
+          class="stat-btn"
+        >
+          All
+        </p>
+        <p
+          [ngClass]="option === 1 ? 'active' : ''"
+          class="stat-btn"
+          (click)="changeOption(1)"
+        >
+          Active
+        </p>
+        <p
+          [ngClass]="option === 2 ? 'active' : ''"
+          class="stat-btn"
+          (click)="changeOption(2)"
+        >
+          Completed
+        </p>
+      </div>
+      <p (click)="clearAll()" class="stat-btn">Clear Completed</p>
+    </div>
   </div>
 </div>

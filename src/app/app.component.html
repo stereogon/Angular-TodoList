@@ -1,3 +1,4 @@
+<img class="hero-img" src="../assets/bg-desktop-light.jpg" alt="" />
 <app-task-entry-component
   [value]="inputValue"
   (message)="onMessage($event)"
@@ -9,4 +10,8 @@
   [onDelete]="onDelete.bind(this)"
   [totalTasks]="getTotalTasks()"
   [remainingTasks]="getRemainingTasks()"
+  [clearAll]="clearAll.bind(this)"
+  [getTasksByOption]="getTasksByOption.bind(this)"
+  [changeOption]="changeOption.bind(this)"
+  [option]="option"
 ></app-task-list-component>

@@ -1,4 +1,5 @@
 <div class="task-entry-container">
+  <h1 class="hero-heading">TODO</h1>
   <div class="input-container">
     <input
       class="entry-input"
@@ -6,9 +7,10 @@
       type="text"
       #Input
       [(ngModel)]="value"
+      (keyup.enter)="clickHandler(Input.value)"
     />
   </div>
-  <div class="btn-container">
+  <!-- <div class="btn-container">
     <button (click)="clickHandler(Input.value)" class="btn add">Add</button>
-  </div>
+  </div> -->
 </div>

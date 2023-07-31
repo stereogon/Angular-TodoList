@@ -1,7 +1,12 @@
 .task-list-container {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 40%;
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .main-container {
@@ -13,6 +18,34 @@
 }
 
 .count-header {
+  font-size: 0.8rem;
+  color: hsl(236, 9%, 61%);
+}
+
+.stats-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background-color: white;
+}
+
+.stat-btn {
   font-size: 1rem;
-  font-weight: lighter;
+  color: hsl(236, 9%, 61%);
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.stat-btn:hover {
+  color: hsl(235, 19%, 35%);
+}
+
+.sorting-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.active {
+  color: hsl(220, 98%, 61%);
 }

@@ -2,10 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  border: 1px solid #dfdfdf;
-  border-radius: 0.8rem;
-  margin-top: 1rem;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #dfdfdf;
+  background-color: white;
+  color: hsl(235, 19%, 35%);
 }
 
 .cut {
@@ -19,4 +19,13 @@
 .card-heading {
   font-size: 1rem;
   font-weight: normal;
+}
+
+.icon {
+  height: 1rem;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
 }

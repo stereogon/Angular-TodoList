@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'todoapp';
   inputValue: string = '';
   tasks: Task[] = [];
+  option = 3;
 
   getTotalTasks() {
     let totalTasks: number = this.getTasks()?.length | 0;
@@ -27,8 +28,28 @@ export class AppComponent {
     return remainingTasks;
   }
 
+  getActiveTasks() {
+    return this.tasks.filter((task: Task) => {
+      return task.isCompleted === false;
+    });
+  }
+
+  getCompletedTasks() {
+    return this.tasks.filter((task: Task) => {
+      return task.isCompleted === true;
+    });
+  }
+
   getTasks() {
-    return this.tasks;
+    return [...this.tasks];
+  }
+
+  clearAll() {
+    let newTasks = this.tasks.map((task: Task) => {
+      return { ...task, isCompleted: false };
+    });
+
+    return (this.tasks = [...newTasks]);
   }
 
   addTask() {
@@ -82,5 +103,22 @@ export class AppComponent {
   onMessage(message: string) {
     this.inputValue = message;
     this.addTask();
+  }
+
+  getTasksByOption(option: number) {
+    switch (option) {
+      case 1:
+        return this.getActiveTasks();
+      case 2:
+        return this.getCompletedTasks();
+      case 3:
+        return this.getTasks();
+      default:
+        return this.getTasks();
+    }
+  }
+
+  changeOption(option: number) {
+    this.option = option;
   }
 }
