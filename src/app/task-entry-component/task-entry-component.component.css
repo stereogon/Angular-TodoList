@@ -30,3 +30,12 @@
   letter-spacing: 0.7rem;
   margin-bottom: 2rem;
 }
+
+@media screen and (orientation: portrait) {
+  .hero-heading {
+    width: 80%;
+  }
+  .input-container {
+    width: 80%;
+  }
+}

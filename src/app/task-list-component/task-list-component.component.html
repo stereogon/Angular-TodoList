@@ -7,7 +7,7 @@
       [onDelete]="onDelete"
     >
     </app-task-element-component>
-    <div class="stats-container">
+    <div class="stats-container-desktop">
       <p class="count-header">{{ remainingTasks }} items left</p>
       <div class="sorting-box">
         <p
@@ -33,6 +33,31 @@
         </p>
       </div>
       <p (click)="clearAll()" class="stat-btn">Clear Completed</p>
+    </div>
+  </div>
+  <div class="stats-container-mobile">
+    <div class="sorting-box-mobile">
+      <p
+        [ngClass]="option === 3 ? 'active' : ''"
+        (click)="changeOption(3)"
+        class="stat-btn"
+      >
+        All
+      </p>
+      <p
+        [ngClass]="option === 1 ? 'active' : ''"
+        class="stat-btn"
+        (click)="changeOption(1)"
+      >
+        Active
+      </p>
+      <p
+        [ngClass]="option === 2 ? 'active' : ''"
+        class="stat-btn"
+        (click)="changeOption(2)"
+      >
+        Completed
+      </p>
     </div>
   </div>
 </div>

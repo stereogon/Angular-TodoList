@@ -1,5 +1,22 @@
 .hero-img {
-  position: absolute;
-  top: 0;
+  background-image: url("../assets/bg-desktop-light.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   z-index: -1;
+  height: 20rem;
+}
+
+.container {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+}
+
+@media screen and (orientation: portrait) {
+  .hero-img {
+    background-image: url("../assets/bg-mobile-light.jpg");
+  }
 }

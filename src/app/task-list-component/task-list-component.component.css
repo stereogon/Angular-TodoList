@@ -22,12 +22,26 @@
   color: hsl(236, 9%, 61%);
 }
 
-.stats-container {
+.stats-container-desktop {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 2rem;
   background-color: white;
+}
+
+.stats-container-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+  background-color: white;
+  display: none;
+  margin-top: 1rem;
+  width: 40%;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .stat-btn {
@@ -46,6 +60,26 @@
   justify-content: space-between;
 }
 
+.sorting-box-mobile {
+  display: flex;
+  justify-content: space-between;
+}
+
 .active {
   color: hsl(220, 98%, 61%);
+}
+
+@media screen and (orientation: portrait) {
+  .sorting-box {
+    display: none;
+  }
+
+  .stats-container-mobile {
+    display: flex;
+    width: 80%;
+  }
+
+  .task-list-container {
+    width: 80%;
+  }
 }
